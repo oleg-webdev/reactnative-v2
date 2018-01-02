@@ -12,9 +12,7 @@ const reducer = (state = initialState, action) => {
         places: [...state.places, {
           key: new Date().getTime(),
           name: action.payload,
-          image: {
-            uri: 'https://goo.gl/wmkFDR'
-          }
+          image: { uri: 'https://goo.gl/wmkFDR' }
         }]
       };
     case REMOVE_PLACE:

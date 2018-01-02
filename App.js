@@ -14,8 +14,11 @@ class App extends React.Component {
     this.setState({placeName: val});
   }
 
-  placeAddHandler = placeName => {
-    this.props.onAdd(this.state.placeName);
+  placeAddHandler = () => {
+    if(this.state.placeName.trim() !== '') {
+      this.props.onAdd(this.state.placeName);
+      console.log(this.state.placeName);
+    }
   }
   
   render() {
